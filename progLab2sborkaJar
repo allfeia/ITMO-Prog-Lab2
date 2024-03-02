@@ -1,0 +1,13 @@
+сборка java программы
+//Manifest//
+Main-Class: Main
+Class-Path: lib/Pokemon.jar {dir lib in dir build}
+
+/оставить путсую строку/
+
+javac -d build -cp "src:lib/Pokemon.jar" src/Main.java {in dir labapr2}>>appear Main.class
+
+jar -cvfm sample.jar Manifest.MF pokemons attacks Main.class {in dir build}
+mv lib build
+java -jar sample.jar
+
